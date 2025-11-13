@@ -1,182 +1,411 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Holiday Survival Series — Brittany Watkins</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="preconnect" href="https://www.youtube.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'warm-cream': '#FAF7F2',
+              'soft-beige': '#F6F2EA',
+              'muted-red': '#C63C2C',
+              'bright-red': '#E83D3D',
+              'gold': '#D4AF37',
+              'warm-gray': '#596774',
+              'deep-blue': '#2E516F',
+            },
+            fontFamily: {
+              'sans': ['Inter', 'system-ui', 'sans-serif'],
+              'serif': ['Libre Baskerville', 'Georgia', 'serif'],
+            },
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="hero">
-      <div class="container">
-        <img class="brand-logo" src="https://dummyimage.com/160x40/ffffff/1e2a33&text=Brittany+Watkins" alt="Brittany Watkins logo" />
-        <h1>Avoid Holiday Weight Gain</h1>
-        <p class="subtitle">Stop the holiday overeating cycle — without guilt, restriction, or willpower.</p>
-        <p class="subtitle-italic">This 6-week live tapping series helps you stay calm, confident, and in control around food - even when you're surrounded by sugar, stress, and family chaos.</p>
-        <p class="note">Limited Spots Available — We're Capping Registrations Due to Zoom Capacity</p>
+  <body class="font-sans text-gray-800 antialiased">
+    <!-- Hero Section -->
+    <section class="relative bg-cover flex flex-col items-center justify-center text-center px-6 py-12 md:py-16" style="background-image: url('britanny_hero.jpg'); background-position: center 20%;">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-blue-800/40"></div>
+      <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+        <div class="inline-block">
+          <img src="logo1.png" alt="Brittany Watkins" class="h-8 md:h-10 w-auto brightness-0 invert" />
+        </div>
+        <h1 class="font-sans font-black text-4xl md:text-6xl leading-tight text-white">Avoid Holiday Weight Gain</h1>
+        <p class="text-xl md:text-2xl text-white/90">Stop the holiday overeating cycle — without guilt, restriction, or willpower.</p>
+        <p class="font-serif italic text-lg md:text-xl text-white/80 max-w-3xl mx-auto">This 6-week live tapping series helps you stay calm, confident, and in control around food - even when you're surrounded by sugar, stress, and family chaos.</p>
+        <p class="text-sm font-serif italic text-yellow-200 pt-2">
+          Limited Spots Available — We're Capping Registrations Due to Zoom Capacity
+        </p>
       </div>
-    </header>
+    </section>
 
     <main>
-      <section id="vsl" class="vsl">
-        <div class="container">
-          <div class="video-wrap" aria-label="Video Sales Letter">
-            <iframe class="video-embed" src="https://www.youtube.com/embed/qmmxKBlKIgg?si=GIyfI0qO0ixVbhkF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <!-- Video Section -->
+      <section id="vsl" class="py-8 md:py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+          <div class="relative w-full max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl">
+            <img class="w-full h-auto" src="placeholder.jpg" alt="Video Sales Letter" loading="lazy" />
           </div>
-          <div class="cta-group">
-            <a href="#pricing" class="btn btn-primary">Join Now</a>
-            <a href="#vsl" class="btn btn-secondary">Watch Video</a>
+          <div class="flex flex-wrap gap-4 justify-center mt-8">
+            <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 bg-muted-red hover:bg-red-700 text-white font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg">
+              Join Now
+            </a>
+            <a href="#vsl" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-muted-red text-muted-red hover:bg-muted-red hover:text-white font-semibold rounded-full transition-all duration-200">
+              Watch Video
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="story">
-        <div class="container">
-          <div class="story-grid">
-            <div class="story-content">
-              <p><strong>You know how it goes…</strong></p>
+      <!-- Story Section -->
+      <section class="py-8 md:py-12 bg-soft-beige">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-lg md:text-xl leading-relaxed">
+              <p><span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">You know how it goes…</span></p>
               <p>You promise yourself you'll be good this year.</p>
               <p>You'll "just have one plate."</p>
               <p>You'll "skip dessert."</p>
               <p>And yet… a few hours later, your plate's full again, your jeans are tight, and that little voice in your head is whispering, "I'll start over Monday."</p>
-              <p><strong>Sound familiar?</strong></p>
+              <p><span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">Sound familiar?</span></p>
               <p>Then Thanksgiving rolls into Christmas, and by January you're feeling bloated, guilty, and frustrated — wondering why you lost control again.</p>
-              <p><strong>The truth? It's not your fault.</strong></p>
+              <p><span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">The truth? It's not your fault.</span></p>
               <p>You don't overeat because you lack discipline.</p>
               <p>You overeat because your nervous system is overwhelmed.</p>
               <p>Food becomes your way to calm down, feel safe, and keep the peace — especially when family stress, loneliness, and emotions run high.</p>
               <p>And until you address that emotional trigger, no amount of "willpower" will make the cravings stop.</p>
             </div>
-            <div class="story-image">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1469&auto=format&fit=crop" alt="Woman contemplating food choices" loading="lazy" />
+            <div>
+              <img class="rounded-2xl shadow-xl w-full h-auto object-cover" src="britanny4.jpg" alt="Woman contemplating food choices" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="series-details">
-        <div class="container content">
-          <h2>This year, it gets to be different.</h2>
-          <p><strong>Starting November 17th</strong>, join me, <strong>Brittany Watkins</strong>, for a <strong>6-Week Live Holiday Survival Series</strong> where I’ll personally show you how to:</p>
-          <ul class="checklist">
-            <li>Tap away cravings in real time — even at the table</li>
-            <li>Stay grounded when family or stress hits hard</li>
-            <li>Let go of guilt after eating so you can enjoy the moment</li>
-            <li>End the “I blew it, so what’s the point?” spiral</li>
-            <li>Wake up each morning feeling calm, light, and proud of yourself</li>
+      <!-- Series Details Section -->
+      <section class="py-8 md:py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-serif mb-8">This year, it gets to be different.</h2>
+          <p class="text-lg md:text-xl mb-8 leading-relaxed"><span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">Starting November 24th</span>, join me, <span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">Brittany Watkins</span>, for a <span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">6-Week Live Holiday Survival Series</span> where I'll personally show you how to:</p>
+          <ul class="text-left max-w-2xl mx-auto space-y-4 mb-8">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-lg md:text-xl">Tap away cravings in real time — even at the table</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-lg md:text-xl">Stay grounded when family or stress hits hard</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-lg md:text-xl">Let go of guilt after eating so you can enjoy the moment</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-lg md:text-xl">End the "I blew it, so what's the point?" spiral</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-lg md:text-xl">Wake up each morning feeling calm, light, and proud of yourself</span>
+            </li>
           </ul>
-          <p>You’ll get <strong>6 live classes</strong> with me, plus <strong>replays</strong> of every session so you can revisit them anytime in between sessions.</p>
+          <p class="text-lg md:text-xl">You'll get <span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">6 live classes</span> with me, plus <span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">replays</span> of every session so you can revisit them anytime in between sessions.</p>
         </div>
       </section>
 
-      <section class="product-visual">
-        <div class="container">
-          <div class="mock">
-            <img class="device desktop" src="file:///C:/Users/bryan/Downloads/zoomlasercall.png" alt="Live Zoom laser coaching call on desktop" loading="lazy" />
-            <img class="device phone" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1470&auto=format&fit=crop" alt="Holiday Survival Series on smartphone" loading="lazy" />
-          </div>
+      <!-- Product Visual Section -->
+      <section class="py-8 md:py-12 bg-soft-beige">
+        <div class="max-w-6xl mx-auto px-6">
+          <img class="rounded-2xl shadow-xl w-full h-auto object-cover mx-auto" src="mockup4.jpg" alt="6 live classes with replays" loading="lazy" />
         </div>
       </section>
 
-      <section id="pricing" class="pricing">
-        <div class="container">
-          <h2><strong>Choose Your Experience</strong></h2>
-          <p class="limited">We're keeping this small so everyone gets attention — we have limited seats available due to Zoom capacity.</p>
-
-          <div class="pricing-grid">
+      <!-- Pricing Section -->
+      <section id="pricing" class="py-10 md:py-16 bg-white relative">
+        <div class="absolute top-12 left-1/2 transform -translate-x-1/2 w-1/3 h-px bg-gray-300"></div>
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-3xl md:text-5xl font-serif text-center mb-4"><span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">Choose Your Experience</span></h2>
+          <p class="text-center text-warm-gray text-lg mb-12">We're keeping this small so everyone gets attention — we have limited seats available due to Zoom capacity.</p>
+          
+          <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <!-- Option 1 -->
-            <article class="card option1">
-              <h3>Option 1: Holiday Survival Series Pass</h3>
-              <div class="card-body">
-                <h4>What’s Included</h4>
-                <ul>
-                  <li>6 Live Weekly Classes with Brittany</li>
-                  <li>Full Access to Replays</li>
-                  <li>Emotional eating reset tools for the holidays</li>
+            <article class="bg-soft-beige rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+              <h3 class="text-xl md:text-2xl font-bold text-bright-red mb-6">Option 1: Holiday Survival Series Pass</h3>
+              <div class="flex-grow">
+                <h4 class="text-sm uppercase tracking-wide text-warm-gray font-semibold mb-3">What's Included</h4>
+                <ul class="space-y-3 mb-8">
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>6 Live Weekly Classes with Brittany</span>
+                  </li>
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Full Access to Replays</span>
+                  </li>
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Emotional eating reset tools for the holidays</span>
+                  </li>
                 </ul>
-                <h4>Investment</h4>
-                <p class="price"><span class="amount">$597</span> <span class="term">one-time</span></p>
-                <p class="perfect-for">Perfect for women who want a powerful 6-week reset and coaching directly with me, Brittany, live.</p>
+                <h4 class="text-sm uppercase tracking-wide text-warm-gray font-semibold mb-3 mt-12">Investment</h4>
+                <p class="mb-4">
+                  <span class="text-4xl font-bold text-gray-900">$597</span>
+                  <span class="text-warm-gray ml-2">one-time</span>
+                </p>
               </div>
-              <a href="#" class="btn btn-primary">Join Now →</a>
+              <a href="#" class="mt-auto inline-flex items-center justify-center w-full px-8 py-4 bg-muted-red hover:bg-red-700 text-white font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                Join Now →
+              </a>
             </article>
 
             <!-- Option 2 Featured -->
-            <article class="card option2 featured" aria-label="Most valuable option">
-              <h3>Option 2: The Tapping Circle Membership</h3>
-              <div class="card-body">
-                <h4>What’s Included</h4>
-                <p>Everything in the Holiday Series plus:</p>
-                <ul>
-                  <li>Monthly live coaching sessions with certified coaches (emotional eating, fat loss for women 40+, hormone balance, self-sabotage)</li>
-                  <li>A monthly Laser Coaching Call with Brittany</li>
-                  <li>24/7 access to On-Demand Tapping App</li>
-                  <li>Supportive private community of women &amp; coaches</li>
-                </ul>
-                <h4>Investment</h4>
-                <p class="price"><span class="amount">$199/month</span> <span class="term">for 3 months (prepaid = $597)</span></p>
-                <p class="fine-print">Continue after 3 months for the same special rate of $199/month (regular $499/month. Cancel anytime.)</p>
-                <p class="perfect-for">Perfect for women who want deeper transformation, ongoing accountability, and personal support year-round</p>
+            <article class="bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex flex-col relative" style="border: 3px solid #C63C2C;" aria-label="Most valuable option">
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gold text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                MOST POPULAR
               </div>
-              <a href="#" class="btn btn-accent">Join Now →</a>
+              <h3 class="text-xl md:text-2xl font-bold text-bright-red mb-6 mt-2">Option 2: The Tapping Circle Membership</h3>
+              <div class="flex-grow">
+                <h4 class="text-sm uppercase tracking-wide text-warm-gray font-semibold mb-3">What's Included</h4>
+                <ul class="space-y-3 mb-4">
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>6 Live Weekly Classes with Brittany</span>
+                  </li>
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Full Access to Replays</span>
+                  </li>
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Emotional eating reset tools for the holidays</span>
+                  </li>
+                </ul>
+                <p class="text-base mb-3 font-semibold mt-6">Plus:</p>
+                <ul class="space-y-3 mb-8">
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Monthly live coaching sessions with certified coaches (emotional eating, fat loss for women 40+, hormone balance, self-sabotage)</span>
+                  </li>
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>A monthly Laser Coaching Call with Brittany</span>
+                  </li>
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>24/7 access to On-Demand Tapping App</span>
+                  </li>
+                  <li class="flex items-start text-base">
+                    <svg class="w-5 h-5 text-muted-red mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Supportive private community of women &amp; coaches</span>
+                  </li>
+                </ul>
+                <h4 class="text-sm uppercase tracking-wide text-warm-gray font-semibold mb-3">Investment</h4>
+                <p class="mb-2">
+                  <span class="text-4xl font-bold text-gray-900">$199/month</span>
+                  <span class="text-warm-gray ml-2">for 3 months (prepaid = $597)</span>
+                </p>
+                <p class="text-sm text-warm-gray mb-4">Continue after 3 months for the same special rate of $199/month (regular $499/month. Cancel anytime.)</p>
+              </div>
+              <a href="#" class="mt-auto inline-flex items-center justify-center w-full px-8 py-4 bg-muted-red hover:bg-red-700 text-white font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                Join Now →
+              </a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="difference">
-        <div class="container content">
-          <h2>What Makes This Different</h2>
-          <p>Most programs teach you how to “stay on track” through the holidays by counting points, cutting carbs, or relying on willpower.</p>
-          <p><strong>This one goes straight to the root.</strong></p>
-          <p>You'll learn how to calm the stress, emotions, and subconscious patterns that cause you to overeat in the first place, so you don't have to fight with food at all. And you can actually enjoy holiday food without losing control.</p>
-          <p><span class="underlined">This isn't another diet challenge.</span> It's emotional reprogramming for the season that triggers you most.</p>
-        </div>
-      </section>
-
-      <section class="outcomes">
-        <div class="container content">
-          <h2><strong>You'll Walk Away Feeling:</strong></h2>
-          <ul class="checklist">
-            <li>Peaceful and calm around food</li>
-            <li>Confident in your body (even through the holidays)</li>
-            <li>Free from guilt and not triggered to emotionally eat</li>
-            <li>Empowered with tools that last far beyond December</li>
-          </ul>
-          <p class="urgency">But don't wait… We have a limited number of seats for the live calls and they always fill up fast. Once we hit Zoom capacity, registration closes.</p>
-        </div>
-      </section>
-
-      <section class="cta-final">
-        <div class="container">
-          <h2>Your Chance to Feel in Control — <span class="date-red">Starts November 17th</span></h2>
-          <p>You've done the diets.<br/>You've tried the willpower<br/>You've even tried the shots...</p>
-          <p>Now it's time to heal the REAL reason food feels so powerful — and finally enjoy the holidays without losing yourself.</p>
-          <p>Join me live and let's make this the first holiday season you don't have to recover from.</p>
-          <div class="cta-cards">
-            <div class="mini-card">
-              <h3>Holiday Survival Pass</h3>
-              <p class="price"><span class="amount">$597</span> <span class="term">One-Time</span></p>
-              <a href="#" class="btn btn-primary">Join Now →</a>
+      <!-- Testimonials Section -->
+      <section class="py-10 md:py-16 bg-soft-beige">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-3xl md:text-4xl font-serif text-center mb-16 text-gray-900">What Others Say</h2>
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div class="flex items-center mb-6">
+                <img class="w-16 h-16 rounded-full object-cover mr-4" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&auto=format&fit=crop" alt="Christine J" loading="lazy" />
+                <div>
+                  <h3 class="font-semibold text-lg text-gray-900">Christine J.</h3>
+                  <div class="flex text-yellow-500">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="relative">
+                <svg class="absolute -top-2 -left-2 w-8 h-8 text-muted-red opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <p class="text-gray-700 text-lg leading-relaxed italic pl-6">
+                  "I used to put on 8 pounds every winter because those cookies were a trigger for "stuffing myself with love"…I may eat one of the holiday cookies in a day, but when I do eat that cookie I savor the beauty, the love that made it, the taste in my mouth."
+                </p>
+              </div>
+              <p class="text-right text-warm-gray mt-4 font-medium">~ Christine J</p>
             </div>
-            <div class="mini-card featured">
-              <h3>The Tapping Circle</h3>
-              <p class="price"><span class="amount">$199/month</span> <span class="term">for 3 Months (Prepaid = $597)</span></p>
-              <a href="#" class="btn btn-accent">Join Now →</a>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div class="flex items-center mb-6">
+                <img class="w-16 h-16 rounded-full object-cover mr-4" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop" alt="Joanne R" loading="lazy" />
+                <div>
+                  <h3 class="font-semibold text-lg text-gray-900">Joanne R.</h3>
+                  <div class="flex text-yellow-500">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="relative">
+                <svg class="absolute -top-2 -left-2 w-8 h-8 text-muted-red opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <p class="text-gray-700 text-lg leading-relaxed italic pl-6">
+                  "The stress around food isn't there anymore. I realized I have not binged in a month and I started getting messages from my body where my body communicates to me what it wants and what it doesn't. One day during the program, I just dropped sugar and didn't want it anymore. I just feel really good!"
+                </p>
+              </div>
+              <p class="text-right text-warm-gray mt-4 font-medium">~ Joanne R.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-8 md:py-12 bg-soft-beige">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-lg md:text-xl leading-relaxed">
+              <h2 class="text-3xl md:text-4xl font-serif mb-6">What Makes This Different</h2>
+              <p>Most programs teach you how to "stay on track" through the holidays by counting points, cutting carbs, or relying on willpower.</p>
+              <p><span class="text-2xl md:text-3xl font-serif italic text-bright-red font-semibold">This one goes straight to the root.</span></p>
+              <p>You'll learn how to calm the stress, emotions, and subconscious patterns that cause you to overeat in the first place, so you don't have to fight with food at all. And you can actually enjoy holiday food without losing control.</p>
+              <p><span class="underline">This isn't another diet challenge.</span> It's emotional reprogramming for the season that triggers you most.</p>
+            </div>
+            <div>
+              <img class="rounded-2xl shadow-xl w-full h-auto object-cover" src="britanny2.heic" alt="Healthy holiday food" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcomes Section -->
+      <section class="py-8 md:py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img class="rounded-2xl shadow-xl w-full h-auto object-cover" src="britanny1.jpg" alt="Woman feeling confident and peaceful" loading="lazy" />
+            </div>
+            <div class="space-y-6">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6">You'll Walk Away Feeling:</h2>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg md:text-xl">Peaceful and calm around food</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg md:text-xl">Confident in your body (even through the holidays)</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg md:text-xl">Free from guilt and not triggered to emotionally eat</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-muted-red mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-lg md:text-xl">Empowered with tools that last far beyond December</span>
+                </li>
+              </ul>
+              <p class="text-muted-red font-semibold text-lg mt-8">But don't wait… We have a limited number of seats for the live calls and they always fill up fast. Once we hit Zoom capacity, registration closes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA Section -->
+      <section class="py-10 md:py-16 bg-soft-beige relative">
+        <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-1/3 h-px bg-gray-400"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-5xl font-serif mb-8">Your Chance to Feel in Control — <span class="text-bright-red">Starts November 24th</span></h2>
+          <p class="text-xl md:text-2xl mb-4 leading-relaxed">You've done the diets.<br/>You've tried the willpower<br/>You've even tried the shots...</p>
+          <p class="text-lg md:text-xl mb-6 leading-relaxed">Now it's time to heal the REAL reason food feels so powerful — and finally enjoy the holidays without losing yourself.</p>
+          <p class="text-lg md:text-xl mb-12 leading-relaxed">Join me live and let's make this the first holiday season you don't have to recover from.</p>
+          <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Holiday Survival Pass</h3>
+              <p class="mb-6">
+                <span class="text-4xl font-bold text-gray-900 block">$597</span>
+                <span class="text-warm-gray">One-Time</span>
+              </p>
+              <a href="#" class="inline-flex items-center justify-center w-full px-8 py-4 bg-muted-red hover:bg-red-700 text-white font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                Join Now →
+              </a>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-muted-red">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Membership with Holiday Survival Series</h3>
+              <p class="mb-6">
+                <span class="text-4xl font-bold text-gray-900">$199/month</span>
+                <span class="text-warm-gray ml-2 block text-sm">for 3 Months (Prepaid = $597)</span>
+              </p>
+              <a href="#" class="inline-flex items-center justify-center w-full px-8 py-4 bg-muted-red hover:bg-red-700 text-white font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                Join Now →
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p class="muted">© Brittany Watkins — Holiday Survival Series</p>
+    <!-- Footer -->
+    <footer class="bg-muted-red py-8">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-center text-white">© Brittany Watkins — Holiday Survival Series</p>
       </div>
     </footer>
   </body>
